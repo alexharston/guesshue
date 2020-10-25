@@ -1,25 +1,23 @@
-import logo from './logo.svg';
+import { Client } from 'boardgame.io/react';
+import { Local } from 'boardgame.io/multiplayer';
+import { GuessHue } from './Game';
+import GuessHueBoard from './Board';
+import Grid from './Grid';
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+const GuessHueClient = Client({ game: GuessHue, 
+                     board: GuessHueBoard,
+                    multiplayer: Local(),
+                  });
+
+const App = () => {
+  return(
+    <div>
+      <GuessHueClient playerId="0" />
+      <GuessHueClient playerId="1" />
+      <Grid />
     </div>
-  );
-}
+  )
+};
 
 export default App;
