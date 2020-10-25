@@ -9,6 +9,7 @@
     "boardgame.io": "^0.41.1",
     "immer": "^7.0.14",
     "react": "^17.0.1",
+    "react-div-100vh": "^0.5.6",
     "react-dom": "^17.0.1",
     "react-scripts": "4.0.0",
     "web-vitals": "^0.2.4"

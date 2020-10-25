@@ -1,8 +1,12 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 
 
 const GuessHueBoard = (props) => {
     const [ID, setID] = useState(0);
+
+    useEffect(() => {
+        document.title = "Guess Hue - Play a game"
+    });
 
     let winner = '';
     if (props.ctx.gameover) {
