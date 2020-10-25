@@ -2,8 +2,9 @@ import { Client } from 'boardgame.io/react';
 import { Local } from 'boardgame.io/multiplayer';
 import { GuessHue } from './Game';
 import GuessHueBoard from './Board';
-import Nav from './Nav';
 import Logo from './Logo';
+import Header from './Header';
+import Controls from './Controls';
 import Grid from './Grid';
 import Div100vh from "react-div-100vh";
 
@@ -17,10 +18,11 @@ const GuessHueClient = Client({ game: GuessHue,
 const App = () => {
   return(
     <div>
-      <Nav/>
+      <Header/>
       <GuessHueClient playerId="0" />
       <GuessHueClient playerId="1" />
       <Grid />
+      <Controls/>
     </div>
   )
 };
