@@ -7,6 +7,7 @@
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^12.1.10",
     "boardgame.io": "^0.41.1",
+    "chroma-js": "^2.1.0",
     "immer": "^7.0.14",
     "react": "^17.0.1",
     "react-div-100vh": "^0.5.6",
